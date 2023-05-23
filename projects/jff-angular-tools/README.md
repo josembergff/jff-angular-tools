@@ -1,4 +1,4 @@
-# JffAngularTools
+# JFF Angular Tools
 
 A Open Source Angular components and tools for any project based in Angular.
 

@@ -4,7 +4,7 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'jffcurrency'
 })
 export class CurrencyPipe implements PipeTransform {
-  transform(value: number | undefined, displaySymbol: boolean = true, locale: string = 'pt-br', currency: string = 'BRL', minimumFractionDigits: number = 0): string | null {
+  transform(value: number | undefined, displaySymbol: boolean = true, minimumFractionDigits: number = 2, locale: string = 'pt-br', currency: string = 'BRL'): string | null {
     if (value) {
       const f = value.toLocaleString(locale, { style: 'currency', currency: currency });
       const f2 = value.toLocaleString(locale, { minimumFractionDigits: minimumFractionDigits });
