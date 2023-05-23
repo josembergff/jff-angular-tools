@@ -1,6 +1,23 @@
 {
   "name": "jff-angular-tools",
-  "version": "0.0.1",
+  "version": "0.0.3",
+  "author": "Josemberg Ferreira",
+  "email": "josembergff@gmail.com",
+  "homepage": "https://github.com/josembergff/jff-angular-tools#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/josembergff/jff-angular-tools.git"
+  },
+  "description": "A Angular components and tools for any project based in Angular.",
+  "keywords": [
+    "angular",
+    "currency",
+    "jff",
+    "angular tools",
+    "angular components",
+    "angular services"
+  ],
+  "license": "MIT",
   "peerDependencies": {
     "@angular/common": "^15.2.0",
     "@angular/core": "^15.2.0"

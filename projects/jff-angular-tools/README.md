@@ -1,24 +1,49 @@
 # JffAngularTools
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.0.
+A Open Source Angular components and tools for any project based in Angular.
 
-## Code scaffolding
+## How to use
 
-Run `ng generate component component-name --project jff-angular-tools` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project jff-angular-tools`.
-> Note: Don't forget to add `--project jff-angular-tools` or else it will be added to the default project in your `angular.json` file. 
+### Installation
 
-## Build
+```bash
+npm i jff-angular-tools --save
+```
 
-Run `ng build jff-angular-tools` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Apply in your module
 
-## Publishing
+```typescript
+import { JffAngularToolsModule } from 'jff-angular-tools'
 
-After building your library with `ng build jff-angular-tools`, go to the dist folder `cd dist/jff-angular-tools` and run `npm publish`.
+@NgModule({
+    imports: [
+        JffAngularToolsModule
+    ],
+})
+```
 
-## Running unit tests
+## Pipe Currency
 
-Run `ng test jff-angular-tools` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### In your component.html
 
-## Further help
+```html
+    <div>
+        {{ object.cost | jffcurrency }}
+    </div>
+```
+or without symbol
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```html
+    <div>
+        {{ object.cost | jffcurrency : false }}
+    </div>
+```
+
+### Options Pipe Currency
+
+| option                | default
+| --------------        | --------------
+| displaySymbol         | true          
+| locale                | 'pt-br'       
+| currency              | 'BRL'         
+| minimumFractionDigits | 0             
