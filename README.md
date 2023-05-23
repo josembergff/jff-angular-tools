@@ -1,27 +1,49 @@
 # JffAngularTools
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.6.
+A Open Source Angular components and tools for any project based in Angular.
 
-## Development server
+## How to use
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Installation
 
-## Code scaffolding
+```bash
+npm i jff-angular-tools --save
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Apply in your module
 
-## Build
+```typescript
+import { JffAngularToolsModule } from 'jff-angular-tools'
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+@NgModule({
+    imports: [
+        JffAngularToolsModule
+    ],
+})
+```
 
-## Running unit tests
+## Pipe Currency
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### In your component.html
 
-## Running end-to-end tests
+```html
+    <div>
+        {{ object.cost | jffcurrency }}
+    </div>
+```
+or without symbol
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```html
+    <div>
+        {{ object.cost | jffcurrency : false }}
+    </div>
+```
 
-## Further help
+### Options Pipe Currency
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+| option                | default
+| --------------        | --------------
+| displaySymbol         | true          
+| locale                | 'pt-br'       
+| currency              | 'BRL'         
+| minimumFractionDigits | 0             
